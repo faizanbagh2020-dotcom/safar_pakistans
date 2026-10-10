@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153b32">
+  <meta name="description" content="Discover Pakistan's beautiful tourist destinations and find accommodation contact information with Safar Pakistan.">
+  <title>Safar Pakistan — Discover More. Travel Better.</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Safar Pakistan home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>Safar <b>Pakistan</b><small>DISCOVER MORE. TRAVEL BETTER.</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation menu"><span></span><span></span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="#destinations">Destinations</a><a href="#hotels">Hotels</a><a href="#map-section">Explore map</a><a href="#about">About</a>
+        <a class="nav-cta" href="#explore-search">Start exploring <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-image" role="img" aria-label="Mountain landscape in northern Pakistan"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content wrap">
+        <p class="eyebrow light"><span></span> YOUR NEXT STORY STARTS HERE</p>
+        <h1>Find your own<br><em>piece of Pakistan.</em></h1>
+        <p class="hero-copy">From quiet mountain valleys to vibrant cities, discover places worth the journey and stays to make you feel at home.</p>
+        <div class="hero-actions"><a class="button button-gold" href="#destinations">Explore destinations <span>↗</span></a><a class="button button-glass" href="#hotels">Find a place to stay</a></div>
+        <div class="hero-stats" aria-label="Website data summary">
+          <div><strong id="destinationCount">—</strong><span>destinations</span></div>
+          <i></i><div><strong id="hotelCount">—</strong><span>stay listings</span></div><i></i><div><strong>Across Pakistan</strong><span>made for explorers</span></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#explore-search"><span></span> SCROLL TO EXPLORE</a>
+    </section>
+    <section class="search-band" id="explore-search">
+      <div class="wrap search-panel">
+        <div class="search-intro"><span class="eyebrow">PLAN YOUR ESCAPE</span><h2>Where will you go?</h2></div>
+        <form id="globalSearch" class="global-search">
+          <label class="search-field"><span class="field-icon">⌕</span><span class="sr-only">Search destinations or hotels</span><input id="globalQuery" type="search" placeholder="Try “Hunza”, “Lahore” or a hotel name"></label>
+          <label class="select-field"><span class="sr-only">Search type</span><select id="globalType"><option value="all">Everything</option><option value="destinations">Destinations</option><option value="hotels">Hotels & stays</option></select></label>
+          <button class="button button-green" type="submit">Search <span>→</span></button>
+        </form>
+        <p class="search-hint" id="globalSearchHint">Search real records from the supplied datasets.</p>
+      </div>
+    </section>
+    <section class="section wrap" id="destinations">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">THE BEAUTY OF PAKISTAN</p><h2>Places that stay<br><em>with you.</em></h2></div>
+        <p class="section-aside">Explore landscapes, culture and hidden corners. Find a place that matches your kind of adventure.</p>
+      </div>
+      <div class="destination-toolbar reveal">
+        <div class="filter-chips" id="categoryChips"><button class="chip active" data-category="all">All places</button></div>
+        <label class="compact-search"><span aria-hidden="true">⌕</span><span class="sr-only">Search destinations</span><input id="destinationQuery" type="search" placeholder="Search destinations"></label>
+      </div>
+      <div class="destination-grid" id="destinationGrid" aria-live="polite"><div class="loading-card">Preparing destinations…</div></div>
+      <div class="section-bottom"><p id="destinationResults" class="result-note"></p><button class="button button-outline" id="loadMoreDestinations" hidden>Load more places <span>↓</span></button></div>
+    </section>
+    <section class="quote-strip">
+      <div class="wrap quote-inner reveal"><span class="quote-mark">“</span><p>Travel is not just about reaching a place.<br><em>It is about everything you discover along the way.</em></p><span class="quote-line"></span></div>
+    </section>
+    <section class="section hotel-section" id="hotels">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">YOUR STAY, YOUR WAY</p><h2>Find a place to<br><em>call your base.</em></h2></div>
+          <p class="section-aside">Browse accommodation listings and use the available contact details to plan your stay directly.</p>
+        </div>
+        <div class="hotel-controls reveal">
+          <label class="hotel-search"><span aria-hidden="true">⌕</span><span class="sr-only">Search accommodation</span><input id="hotelQuery" type="search" placeholder="Search by hotel, city or address…"></label>
+          <label><span class="sr-only">Filter by province</span><select id="provinceFilter"><option value="">All provinces / regions</option></select></label>
+          <label><span class="sr-only">Filter by contact details</span><select id="contactFilter"><option value="all">Any contact details</option><option value="phone">Phone available</option><option value="website">Website available</option><option value="map">Map location available</option></select></label>
+          <label><span class="sr-only">Sort listings</span><select id="hotelSort"><option value="name">Name A–Z</option><option value="name-desc">Name Z–A</option><option value="contact">Contact details first</option></select></label>
+          <button class="text-button" id="clearHotelFilters">Reset filters</button>
+        </div>
+        <div class="directory-meta"><p id="hotelResults">Loading accommodation listings…</p><span>Listings are based on the supplied datasets</span></div>
+        <div class="hotel-grid" id="hotelGrid" aria-live="polite"><div class="loading-card">Loading stays…</div></div>
+        <div class="section-bottom"><button class="button button-outline" id="loadMoreHotels" hidden>Load more stays <span>↓</span></button></div>
+      </div>
+    </section>
+    <section class="map-section" id="map-section">
+      <div class="wrap map-layout">
+        <div class="map-copy reveal"><p class="eyebrow light">GET YOUR BEARINGS</p><h2>Every journey<br>starts <em>somewhere.</em></h2><p>Explore the map using your destination coordinates. Open a location in your preferred map service to plan your route.</p><a class="button button-gold" href="https://www.openstreetmap.org" target="_blank" rel="noopener noreferrer">Explore OpenStreetMap ↗</a><small>Map links open an external service. Locations depend on available dataset coordinates.</small></div>
+        <div class="map-card reveal"><div class="map-card-top"><span class="map-pin">⌖</span><div><strong>Explore by location</strong><span>Selected places from the directory</span></div></div><div id="mapPlaces" class="map-places"><p class="loading-card">Finding places with coordinates…</p></div><div class="map-card-foot"><span class="legend-dot destination-dot"></span> Destinations <span class="legend-dot hotel-dot"></span> Accommodation</div></div>
+      </div>
+    </section>
+    <section class="about-section section wrap" id="about">
+      <div class="about-image reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?auto=format&fit=crop&w=1000&q=85" alt="A scenic mountain lake surrounded by forest"><span class="image-caption">PAKISTAN, WAITING TO BE DISCOVERED</span></div>
+      <div class="about-copy reveal"><p class="eyebrow">A LITTLE ABOUT US</p><h2>Made for the<br><em>curious traveller.</em></h2><p>Safar Pakistan brings tourist destinations and accommodation information together in one easy-to-use place. Whether you are planning a weekend escape or a longer adventure, start with inspiration and explore the details that help you move forward.</p><p class="fine-print">Information is compiled from supplied datasets and may be incomplete or out of date. Please confirm contact details, access conditions and travel arrangements directly before your trip. Listings are not endorsements.</p><a class="inline-link" href="#explore-search">Start your discovery <span>→</span></a></div>
+    </section>
+    <section class="closing-cta">
+      <div class="wrap closing-inner reveal"><p class="eyebrow light">THE ROAD IS CALLING</p><h2>Your next great story<br>is <em>out there.</em></h2><a class="button button-gold" href="#destinations">Find your destination <span>↗</span></a></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-main"><a class="brand brand-footer" href="#top"><span class="brand-mark">S</span><span>Safar <b>Pakistan</b><small>DISCOVER MORE. TRAVEL BETTER.</small></span></a><p>Discover the places. Find your way.<br>Travel Pakistan with curiosity.</p><div class="footer-links"><a href="#destinations">Destinations</a><a href="#hotels">Hotels & stays</a><a href="#map-section">Explore map</a><a href="#about">About</a></div></div>
+    <div class="wrap footer-bottom"><span>© <span id="year"></span> Safar Pakistan. Built for explorers.</span><span>Travel information should be confirmed before departure.</span></div>
+  </footer>
+  <dialog id="detailDialog" class="detail-dialog" aria-labelledby="dialogTitle"><button class="dialog-close" id="dialogClose" aria-label="Close details">×</button><div id="dialogContent"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
